@@ -5,7 +5,7 @@
  * - Block-Rock-E-Commerce: https://github.com/ashishsahoo18/Block-Rock-E-Commerce
  * - Desktop-Notifier: https://github.com/ashishsahoo18/Desktop-Notifier
  * - selenium-google-search: https://github.com/ashishsahoo18/selenium-google-search
- * - Personal Portfolio: https://github.com/ashishsahoo18
+ * - my-own-voice-assistant: https://github.com/ashishsahoo18/my-own-voice-assistant
  */
 
 export const projectFilters = [
@@ -15,6 +15,28 @@ export const projectFilters = [
 ];
 
 export const projects = [
+  {
+    id: "voice-assistant",
+    title: "My Own Voice Assistant",
+    category: "automation",
+    badge: "AI & Desktop Assistant",
+    description:
+      "An autonomous voice assistant and Windows desktop cockpit built with Python. Powered locally by Ollama (Llama 3.2), offline Vosk speech recognition, and CustomTkinter HUD GUI with zero paid cloud API dependencies.",
+    technologies: ["Python", "Ollama (Llama 3.2)", "CustomTkinter", "Vosk", "pyttsx3"],
+    features: [
+      "Offline-first speech recognition (Vosk) and speech synthesis (pyttsx3 / SAPI5)",
+      "Local LLM intelligence powered by Ollama and Llama 3.2",
+      "Windows desktop automation, live system telemetry, and multi-step agent loop",
+      "Thread-safe CustomTkinter cockpit HUD interface with central security policy gate"
+    ],
+    githubUrl: "https://github.com/ashishsahoo18/my-own-voice-assistant",
+    liveUrl: "",
+    isPlaceholderLink: false,
+    liveIsPlaceholder: false,
+    placeholderNote: "Desktop AI assistant executed locally via Python",
+    iconType: "mic",
+    themeColor: "#FFD600"
+  },
   {
     id: "blockrock",
     title: "Block Rock Fashion Store",
@@ -79,28 +101,6 @@ export const projects = [
     liveIsPlaceholder: false,
     placeholderNote: "Browser automation script run via Selenium WebDriver",
     iconType: "search",
-    themeColor: "#FFD600"
-  },
-  {
-    id: "portfolio",
-    title: "Personal Developer Portfolio",
-    category: "web-app",
-    badge: "Current Site",
-    description:
-      "A responsive, high-performance personal developer website built with React and Vite to honestly showcase my learning journey, skills, and coding projects.",
-    technologies: ["React", "JavaScript", "CSS3", "Vite"],
-    features: [
-      "Modern futuristic dark & yellow visual identity",
-      "Component-driven architecture and smooth navigation",
-      "Centralized data files for seamless maintenance",
-      "Accessible interactions, mobile drawer, and zero broken links"
-    ],
-    githubUrl: "https://github.com/ashishsahoo18",
-    liveUrl: "#home",
-    isPlaceholderLink: false,
-    liveIsPlaceholder: false,
-    placeholderNote: "This website right here!",
-    iconType: "laptop",
     themeColor: "#FFD600"
   }
 ];

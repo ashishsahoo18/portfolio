@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, ExternalLink, Check, ShoppingBag, Bell, Search, Laptop } from 'lucide-react';
+import { Github, ExternalLink, Check, ShoppingBag, Bell, Search, Mic } from 'lucide-react';
 import { projectFilters, projects } from '../data/projects';
 import PlaceholderModal from './PlaceholderModal';
 import { personalInfo } from '../data/config';
@@ -38,6 +38,26 @@ export default function Projects() {
 
   const renderProjectVisual = (project) => {
     switch (project.id) {
+      case 'voice-assistant':
+        return (
+          <div className="project-preview-mockup">
+            <span className="preview-badge-category">{project.badge}</span>
+            <div className="mockup-canvas">
+              <div className="mockup-top-bar">
+                <span className="mockup-circle" />
+                <span className="mockup-circle" />
+                <span className="mockup-circle" />
+                <span style={{ fontSize: '0.7rem', color: '#666', marginLeft: 8 }}>main.py / voice-cockpit</span>
+              </div>
+              <div className="mockup-content-preview" style={{ flexDirection: 'column', gap: 6 }}>
+                <Mic size={32} color="#FFD600" />
+                <span style={{ fontSize: '0.78rem', color: '#eee', fontWeight: 600 }}>Autonomous AI Voice Cockpit</span>
+                <span style={{ fontSize: '0.7rem', color: '#888' }}>Ollama &bull; Llama 3.2 &bull; Vosk STT &bull; HUD GUI</span>
+              </div>
+            </div>
+          </div>
+        );
+
       case 'blockrock':
         return (
           <div className="project-preview-mockup">
@@ -79,6 +99,7 @@ export default function Projects() {
         );
 
       case 'selenium-google-search':
+      default:
         return (
           <div className="project-preview-mockup">
             <span className="preview-badge-category">{project.badge}</span>
@@ -93,27 +114,6 @@ export default function Projects() {
                 <Search size={32} color="#FFD600" />
                 <span style={{ fontSize: '0.78rem', color: '#eee', fontWeight: 600 }}>Selenium Browser Automation</span>
                 <span style={{ fontSize: '0.7rem', color: '#888' }}>Multi-browser search & automated screenshots</span>
-              </div>
-            </div>
-          </div>
-        );
-
-      case 'portfolio':
-      default:
-        return (
-          <div className="project-preview-mockup">
-            <span className="preview-badge-category">{project.badge}</span>
-            <div className="mockup-canvas">
-              <div className="mockup-top-bar">
-                <span className="mockup-circle" />
-                <span className="mockup-circle" />
-                <span className="mockup-circle" />
-                <span style={{ fontSize: '0.7rem', color: '#666', marginLeft: 8 }}>ashishsahoo.dev</span>
-              </div>
-              <div className="mockup-content-preview" style={{ flexDirection: 'column', gap: 6 }}>
-                <Laptop size={32} color="#FFD600" />
-                <span style={{ fontSize: '0.78rem', color: '#eee', fontWeight: 600 }}>React + Vite Developer Portfolio</span>
-                <span style={{ fontSize: '0.7rem', color: '#888' }}>High-performance dark & yellow theme</span>
               </div>
             </div>
           </div>
@@ -193,19 +193,7 @@ export default function Projects() {
                     <span>{project.isPlaceholderLink ? 'GitHub (Setup)' : 'GitHub Repo'}</span>
                   </a>
 
-                  {project.id === 'portfolio' ? (
-                    <a
-                      href="#home"
-                      className="btn btn-primary btn-sm"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                      }}
-                    >
-                      <span>Active Site</span>
-                      <Check size={16} />
-                    </a>
-                  ) : project.liveUrl ? (
+                  {project.liveUrl ? (
                     <a
                       href={project.liveUrl}
                       target={project.liveIsPlaceholder ? '_self' : '_blank'}
