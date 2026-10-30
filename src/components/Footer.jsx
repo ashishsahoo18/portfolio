@@ -65,7 +65,7 @@ export default function Footer() {
             &copy; {currentYear} {personalInfo.name}. All rights reserved.
           </div>
           <div>
-            Built with React &bull; Hosted by Ashish Sahoo &bull; Cuttack, India
+            Built with React &bull; Hosted by Ashish Sahoo &bull; Bhubaneswar, Odisha, India
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ export const personalInfo = {
   about: {
     heading: "Turning Curiosity Into Code.",
     paragraphs: [
-      "I am a Computer Science and Technology (CST) undergraduate based in Cuttack, Odisha, driven by a deep curiosity for how software empowers people and solves real-world challenges.",
+      "I am a Computer Science and Technology (CST) undergraduate based in Bhubaneswar, Odisha, driven by a deep curiosity for how software empowers people and solves real-world challenges.",
       "Rather than focusing purely on theory, I learn by building practical projects. From writing clean JavaScript logic and building responsive user interfaces with React, to exploring algorithms in Python and C++, I enjoy transforming abstract concepts into tangible digital tools.",
       "Currently, I am strengthening my fundamentals in core web technologies, practicing data structures and algorithms, and actively preparing myself to contribute to engineering teams through campus placement opportunities."
     ],
@@ -52,7 +52,7 @@ export const personalInfo = {
       {
         id: "location",
         label: "Location",
-        value: "Cuttack, Odisha, India",
+        value: "Bhubaneswar, Odisha, India",
         description: "Open to remote work, campus placement, and developer collaborations.",
         icon: "MapPin"
       },

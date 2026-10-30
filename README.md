@@ -1,6 +1,6 @@
 # Ashish Sahoo — Developer Portfolio
 
-A modern, futuristic, responsive personal portfolio website designed and built specifically for **Ashish Sahoo**, a Computer Science and Technology (CST) student and aspiring software developer based in Cuttack, Odisha, India.
+A modern, futuristic, responsive personal portfolio website designed and built specifically for **Ashish Sahoo**, a Computer Science and Technology (CST) student and aspiring software developer based in Bhubaneswar, Odisha, India.
 
 ---
 
